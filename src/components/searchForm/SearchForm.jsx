@@ -3,6 +3,8 @@ import axios from "axios";
 import { searchDeezer } from "../../redux";
 import { useSelector, useDispatch } from "react-redux";
 
+import "./SearchForm.scss";
+
 const SearchForm = () => {
     const [query, setQuery] = useState("");
 
@@ -27,8 +29,12 @@ const SearchForm = () => {
             <div className="container">
                 <div className="search-form">
                     <form onSubmit={onSubmit}>
-                        <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} />
-                        <button type="submit">SEARCH</button>
+                        <div className="search-form__inner">
+                            <input type="search" className="search-form__input" placeholder="Search here .." value={query} onChange={(e) => setQuery(e.target.value)} />
+                            <button className="search-form__btn-submit" type="submit">
+                                SEARCH
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
