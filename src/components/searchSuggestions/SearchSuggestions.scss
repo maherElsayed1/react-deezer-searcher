@@ -1,0 +1,40 @@
+.search-suggestions {
+    background: #232323;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    margin-top: 15px;
+    padding: 20px;
+    color: #8c8c8c;
+    height: 200px;
+    overflow: auto;
+    z-index: 99;
+
+    &::after {
+        bottom: 100%;
+        left: 10%;
+        border: solid transparent;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-bottom-color: #232323;
+        border-width: 8px;
+        margin-left: -8px;
+    }
+
+    &__title {
+        font-size: 15px;
+    }
+
+    &__list-item {
+        border-bottom: 1px solid #1b1b1b;
+        padding: 10px 20px;
+        font-size: 13px;
+        cursor: pointer;
+        &:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
