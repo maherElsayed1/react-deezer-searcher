@@ -36,8 +36,6 @@ const SearchForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        setShowSearchSuggestion(false);
-        handleClick();
     };
 
     return (
